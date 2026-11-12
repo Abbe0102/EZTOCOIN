@@ -1,0 +1,12 @@
+{
+  "name": "EZTO Coin",
+  "symbol": "EZTO",
+  "description": "EZTO is a clean community token on Solana: 0% tax, fixed supply, no freeze authority. From meme coin to a simple non-custodial trading platform.",
+  "image": "https://REPLACE_WITH_LOGO_URL/ezto.png",
+  "external_url": "https://REPLACE_WITH_WEBSITE",
+  "extensions": {
+    "website": "https://REPLACE_WITH_WEBSITE",
+    "twitter": "https://x.com/REPLACE",
+    "telegram": "https://t.me/REPLACE"
+  }
+}
