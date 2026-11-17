@@ -15,6 +15,7 @@ EZTO starts as a meme coin but moves forward, beyond the frame. The italic slant
 | `logo/ezto-logo-horizontal-white.svg` | Mark + white wordmark |
 | `social/ezto-avatar-1000.png` | Profile picture: X, Telegram, TikTok, Instagram |
 | `social/ezto-x-banner-1500x500.png` | X (Twitter) header |
+| `social/ezto-og-1200x630.png` | Link preview image (website) |
 
 ## Colors
 | Name | Hex | |
