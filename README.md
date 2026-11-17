@@ -14,7 +14,7 @@ A clean community token on **Solana**: 0% tax, fixed supply, no freeze authority
 
 ```
 docs/WHITEPAPER.md      Whitepaper (v2 draft)
-docs/LAUNCH_GUIDE.md    Step-by-step launch guide (Arabic)
+docs/LAUNCH_GUIDE.md    Step-by-step launch guide
 token/                  Token launch code (TypeScript)
   src/config.ts         Token settings & allocations
   src/launch.ts         Mint, distribute, revoke-authority instructions
