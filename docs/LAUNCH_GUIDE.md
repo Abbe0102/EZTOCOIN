@@ -1,55 +1,56 @@
-# دليل إطلاق EZTO خطوة بخطوة
+# EZTO Launch Guide
 
-> ⚠️ **قاعدة ذهبية:** كل شي منجرّبه على **devnet** (شبكة التجربة، فلوسها مش حقيقية) قبل **mainnet**.
-> ولا مرة تشارك الـ seed phrase أو ملف الـ keypair مع حدا، ولا حتى معي.
+> ⚠️ **Golden rule:** everything is tested on **devnet** (test network, no real money) before **mainnet**.
+> Never share your seed phrase or keypair file with anyone.
 
-## 0. التحضير
-1. نزّل محفظة **Phantom** أو **Solflare**.
-2. نزّل [Solana CLI](https://docs.anza.xyz/cli/install) و Node.js 20 أو أحدث.
-3. اعمل محفظة للإطلاق: `solana-keygen new -o ~/ezto-launch.json`.
-4. اعمل **5 محافظ منفصلة** (Liquidity, Platform, Marketing, Staking, Team) وانسخ عناوينها.
+## 0. Preparation
+1. Install a wallet: **Phantom** or **Solflare**.
+2. Install the [Solana CLI](https://docs.anza.xyz/cli/install) and Node.js 20+.
+3. Create a launch wallet: `solana-keygen new -o ~/ezto-launch.json`.
+4. Create **5 separate wallets** (Liquidity, Platform, Marketing, Staking, Team) and copy their addresses.
 
-## 1. الهوية (اللوغو والمعلومات)
-1. جهّز لوغو PNG مربّع (512×512).
-2. ارفع اللوغو على مكان دائم (مثلاً Arweave أو IPFS عن طريق Pinata).
-3. انسخ `token/metadata.example.json`، عبّي الروابط فيه، وارفعه كمان. **رابطه** هو الـ `--uri`.
+## 1. Token identity (logo & metadata)
+1. Use the token icon from `brand/logo/ezto-icon-1024.png`.
+2. Upload it to permanent storage (Arweave, or IPFS via Pinata).
+3. Copy `token/metadata.example.json`, fill in the links and upload it too. Its **URL** is the `--uri` value.
 
-## 2. تجربة على devnet
+## 2. Test on devnet
 ```bash
 cd token && npm install
 solana config set --url devnet
 solana airdrop 2 ~/ezto-launch.json
-cp recipients.example.json recipients.json   # وحط فيه عناوين المحافظ الخمسة
-npm run launch -- --keypair ~/ezto-launch.json --recipients recipients.json --uri <رابط-الـmetadata>
-# راجع الخطة، وإذا كلشي تمام:
-npm run launch -- --keypair ~/ezto-launch.json --recipients recipients.json --uri <رابط-الـmetadata> --execute
+cp recipients.example.json recipients.json   # fill in the 5 wallet addresses
+npm run launch -- --keypair ~/ezto-launch.json --recipients recipients.json --uri <metadata-url>
+# review the plan, then:
+npm run launch -- --keypair ~/ezto-launch.json --recipients recipients.json --uri <metadata-url> --execute
 ```
-افتح الرابط اللي بيطلع على Solana Explorer وتأكد إنو:
+Open the Solana Explorer link it prints and verify:
 - Supply = 1,000,000,000
-- Mint Authority = ما في
-- Freeze Authority = ما في
+- Mint Authority = none
+- Freeze Authority = none
 
-## 3. الإطلاق الحقيقي على mainnet
-نفس الأوامر بس مع `--cluster mainnet-beta`، وبتحتاج حوالي 0.05 SOL للرسوم.
-**احفظ ملف `mint-mainnet-beta.json` وعنوان التوكن بمكان آمن.**
+## 3. Mainnet launch
+Same commands with `--cluster mainnet-beta`. You need about 0.05 SOL for fees.
+**Store `mint-mainnet-beta.json` and the token address somewhere safe.**
 
-## 4. السيولة (Raydium)
-1. من محفظة Liquidity روح على Raydium وافتح **Create Pool** (نوع CPMM).
-2. حط الـ 400M EZTO ومعهن كمية SOL، وهي بتحدد السعر الأولي.
-3. بعد ما تعمل الـ pool **احرق الـ LP tokens** (Raydium فيها خيار Burn & Earn). هيك ما حدا بيقدر يسحب السيولة.
+## 4. Liquidity (Raydium)
+1. From the Liquidity wallet, open Raydium → **Create Pool** (CPMM).
+2. Add the 400M EZTO and an amount of SOL; this sets the starting price.
+3. After creating the pool, **burn the LP tokens** (Raydium "Burn & Earn"). Liquidity can then never be pulled.
 
-## 5. قفل التوكنات (Streamflow)
-من [Streamflow](https://app.streamflow.finance) اعمل Vesting:
-| المحفظة | الإعداد |
+## 5. Token locks (Streamflow)
+Create vesting contracts on [Streamflow](https://app.streamflow.finance):
+
+| Wallet | Schedule |
 |---|---|
-| Team | Cliff 12 شهر، وبعدين linear 24 شهر |
-| Platform | Cliff 6 شهور، وبعدين linear 24 شهر |
-| Marketing | 50M حرّة، و100M linear 12 شهر |
-| Staking | مقفولة لحد ما يجهز برنامج الـ staking |
+| Team | 12-month cliff, then 24 months linear |
+| Platform | 6-month cliff, then 24 months linear |
+| Marketing | 50M unlocked, 100M linear over 12 months |
+| Staking | Locked until the staking program is live |
 
-انشر روابط عقود الـ vesting على الموقع.
+Publish the vesting contract links on the website.
 
-## 6. بعد الإطلاق
-- قفل الـ metadata نهائياً بعد ما يثبت اللوغو والروابط (منضيف أمر لهالشي).
-- تسجيل التوكن على CoinGecko و CoinMarketCap.
-- نشر عنوان التوكن الرسمي على الموقع وكل الحسابات.
+## 6. After launch
+- Make the metadata immutable once the logo and links are final.
+- Submit the token to CoinGecko and CoinMarketCap.
+- Publish the official token address on the website and every social account.
