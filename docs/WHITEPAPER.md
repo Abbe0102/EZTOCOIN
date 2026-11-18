@@ -141,7 +141,7 @@ As the project grows, we will grow the team with contributors from the community
 - 🔹 **Contribute:** review the code, suggest ideas and report bugs.
 - 🔹 **Spread the word:** share EZTO with your network.
 
-**Official links:** Website · X (Twitter) · Telegram · GitHub *(to be announced)*
+**Official links:** [eztocoin.com](https://eztocoin.com) · [X](https://x.com/EZTOCOIN) · [Telegram](https://t.me/Eztocoin) · [TikTok](https://www.tiktok.com/@eztocoin) · [Instagram](https://www.instagram.com/eztocoin) · [GitHub](https://github.com/Abbe0102/EZTOCOIN) · [hello@eztocoin.com](mailto:hello@eztocoin.com)
 
 > ⚠️ Always verify the official mint address on our website. Beware of fake tokens using the EZTO name.
 
