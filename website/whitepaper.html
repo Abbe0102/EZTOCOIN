@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Whitepaper | EZTO</title>
+  <meta name="description" content="The EZTO whitepaper: a clean community token on Solana, its tokenomics, roadmap and risks.">
+  <meta name="theme-color" content="#070B1C">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-512.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="EZTO Whitepaper">
+  <meta property="og:description" content="From meme coin to a community trading platform on Solana.">
+  <meta property="og:image" content="https://abbe0102.github.io/EZTOCOIN/assets/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@EZTOCOIN">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="whitepaper.css">
+</head>
+<body class="wp-page">
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="./" class="nav-logo" aria-label="EZTO home"><img src="assets/logo.svg" alt="EZTO" width="138" height="47"></a>
+      <div class="wp-nav-actions">
+        <button type="button" class="btn btn-sm btn-ghost" id="save-pdf">Save<span class="wp-long">&nbsp;as</span>&nbsp;PDF</button>
+        <a href="./" class="btn btn-sm"><span class="wp-long">Back to site</span><span class="wp-short">Home</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap wp-layout">
+    <aside class="wp-toc" aria-label="Contents">
+      <p class="wp-toc-title">Contents</p>
+      <ol>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#vision">Vision &amp; Mission</a></li>
+        <li><a href="#clean-token">A Clean, Fair Token</a></li>
+        <li><a href="#tokenomics">Tokenomics</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#ecosystem">Ecosystem</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#get-involved">How to Get Involved</a></li>
+        <li><a href="#risks">Risks &amp; Disclaimer</a></li>
+      </ol>
+    </aside>
+
+    <article class="wp">
+      <header class="wp-head">
+        <img class="wp-print-logo" src="assets/logo.svg" alt="EZTO" width="160" height="55">
+        <p class="eyebrow">Whitepaper · Version 2.0</p>
+        <h1>From meme coin to a <span class="grad">community trading platform</span> on Solana.</h1>
+        <p class="wp-meta">This document describes plans and may change as the project develops.</p>
+      </header>
+
+      <section id="introduction">
+        <h2><span class="wp-num">01</span>Introduction</h2>
+        <h3>What is EZTO?</h3>
+        <p>EZTO is a community token on the <strong>Solana</strong> blockchain. It starts as a fun, open meme coin and grows step by step into a set of real products: a simple swap interface, staking, and payments.</p>
+        <p>Many meme coins live only on hype. EZTO's goal is to keep the fun of a meme coin and add real, usable products over time, built in public with code that anyone can read.</p>
+        <h3>Why Solana?</h3>
+        <ul>
+          <li><strong>Fast:</strong> transactions confirm in seconds.</li>
+          <li><strong>Cheap:</strong> fees are usually a fraction of a cent.</li>
+          <li><strong>Big ecosystem:</strong> wallets (Phantom, Solflare), DEXs (Raydium, Orca) and aggregators (Jupiter) are mature and widely used.</li>
+        </ul>
+      </section>
+
+      <section id="vision">
+        <h2><span class="wp-num">02</span>Vision &amp; Mission</h2>
+        <div class="wp-pair">
+          <div class="wp-box">
+            <h3>Vision</h3>
+            <p>To make crypto trading simple for everyone, with EZTO at the center of an easy, non-custodial trading experience.</p>
+          </div>
+          <div class="wp-box">
+            <h3>Mission</h3>
+            <p>To build simple and transparent tools on Solana for swapping, holding and using digital assets, while users keep control of their own funds.</p>
+          </div>
+        </div>
+        <h3>Core values</h3>
+        <ul class="wp-values">
+          <li><strong>Simplicity</strong>Easy for beginners.</li>
+          <li><strong>Transparency</strong>Open-source code, public wallets, public token unlock schedules.</li>
+          <li><strong>Security</strong>No mint authority, no freeze authority, locked liquidity.</li>
+          <li><strong>Decentralization</strong>Non-custodial products, so users always hold their own keys.</li>
+          <li><strong>Community</strong>The project grows with its holders.</li>
+        </ul>
+      </section>
+
+      <section id="clean-token">
+        <h2><span class="wp-num">03</span>A Clean, Fair Token</h2>
+        <p>EZTO is a <strong>clean token</strong>. It has:</p>
+        <div class="table-wrap">
+          <table class="wp-table">
+            <thead><tr><th scope="col">Property</th><th scope="col">EZTO</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Buy / sell tax</th><td><strong>0%</strong>: no hidden fees</td></tr>
+              <tr><th scope="row">Mint authority</th><td><strong>Revoked</strong>: no one can ever create more EZTO</td></tr>
+              <tr><th scope="row">Freeze authority</th><td><strong>Revoked</strong>: no one can freeze your tokens</td></tr>
+              <tr><th scope="row">Liquidity</th><td><strong>LP tokens burned</strong>: liquidity cannot be pulled</td></tr>
+              <tr><th scope="row">Team tokens</th><td><strong>Locked &amp; vested</strong>: on-chain, publicly verifiable</td></tr>
+              <tr><th scope="row">Code</th><td><strong>Open source</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Anyone can verify these properties on a Solana explorer (Solscan, Solana Explorer) using the token's mint address.</p>
+      </section>
+
+      <section id="tokenomics">
+        <h2><span class="wp-num">04</span>Tokenomics</h2>
+        <dl class="specs">
+          <div><dt>Name</dt><dd>EZTO Coin</dd></div>
+          <div><dt>Symbol</dt><dd>EZTO</dd></div>
+          <div><dt>Blockchain</dt><dd>Solana (SPL)</dd></div>
+          <div><dt>Decimals</dt><dd>6</dd></div>
+          <div><dt>Total supply</dt><dd>1,000,000,000</dd></div>
+          <div><dt>Supply</dt><dd>Fixed forever</dd></div>
+        </dl>
+        <div class="table-wrap">
+          <table class="wp-table alloc-table">
+            <thead><tr><th scope="col">Allocation</th><th scope="col" class="num">%</th><th scope="col" class="num">Amount</th><th scope="col">Release</th></tr></thead>
+            <tbody>
+              <tr><th scope="row"><i style="--c:var(--s1)"></i>Liquidity (DEX pool)</th><td class="num">40%</td><td class="num">400,000,000</td><td>Added to the DEX pool at launch; LP tokens burned</td></tr>
+              <tr><th scope="row"><i style="--c:var(--s2)"></i>Platform Development</th><td class="num">20%</td><td class="num">200,000,000</td><td>Locked: 6-month cliff, then released linearly over 24 months</td></tr>
+              <tr><th scope="row"><i style="--c:var(--s3)"></i>Marketing &amp; Listings</th><td class="num">15%</td><td class="num">150,000,000</td><td>5% unlocked at launch for listings &amp; campaigns; remaining 10% released linearly over 12 months</td></tr>
+              <tr><th scope="row"><i style="--c:var(--s4)"></i>Staking &amp; Rewards</th><td class="num">15%</td><td class="num">150,000,000</td><td>Locked until the staking program goes live, then paid out only as rewards</td></tr>
+              <tr><th scope="row"><i style="--c:var(--s5)"></i>Team</th><td class="num">10%</td><td class="num">100,000,000</td><td>Locked: 12-month cliff, then released linearly over 24 months</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>All locks will be created using an established on-chain vesting protocol (such as Streamflow), and the contract links will be published so anyone can verify them.</p>
+        <h3>Utility</h3>
+        <ul>
+          <li><strong>Trading pair:</strong> EZTO is the main token of the EZTO swap platform.</li>
+          <li><strong>Fee discounts:</strong> holders pay lower fees on the EZTO platform.</li>
+          <li><strong>Staking rewards:</strong> stake EZTO to earn rewards from the Staking &amp; Rewards pool.</li>
+          <li><strong>Payments:</strong> pay in online stores that accept EZTO (future integration).</li>
+        </ul>
+      </section>
+
+      <section id="roadmap">
+        <h2><span class="wp-num">05</span>Roadmap</h2>
+        <p>Dates will be announced as each phase is ready. We will deliver phase by phase and share progress openly.</p>
+        <div class="wp-phases">
+          <div class="wp-box">
+            <p class="phase-num">Phase 1</p>
+            <h3>Launch</h3>
+            <ul>
+              <li>Create the EZTO token with mint &amp; freeze authority revoked.</li>
+              <li>Publish the website, whitepaper and open-source code.</li>
+              <li>Launch the liquidity pool on a Solana DEX (Raydium) and burn the LP tokens.</li>
+              <li>Lock team, platform and reserve tokens on-chain.</li>
+              <li>Build the community (X / Twitter, Telegram).</li>
+            </ul>
+          </div>
+          <div class="wp-box">
+            <p class="phase-num">Phase 2</p>
+            <h3>Growth</h3>
+            <ul>
+              <li>Get listed on trackers (CoinGecko, CoinMarketCap).</li>
+              <li>Run community campaigns and partnerships.</li>
+              <li>Launch the EZTO staking program.</li>
+              <li>Apply for centralized exchange (CEX) listings.</li>
+            </ul>
+          </div>
+          <div class="wp-box">
+            <p class="phase-num">Phase 3</p>
+            <h3>EZTO Swap</h3>
+            <ul>
+              <li>Launch a non-custodial swap interface: users trade directly from their own wallet, routed through Solana's best liquidity (e.g. the Jupiter aggregator).</li>
+              <li>Fee discounts for EZTO holders.</li>
+              <li>Simple portfolio and price tools.</li>
+            </ul>
+          </div>
+          <div class="wp-box">
+            <p class="phase-num">Phase 4</p>
+            <h3>Ecosystem</h3>
+            <ul>
+              <li>Payment integrations for online stores.</li>
+              <li>Advanced trading tools.</li>
+              <li>Community governance on selected decisions.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="ecosystem">
+        <h2><span class="wp-num">06</span>Ecosystem</h2>
+        <ul>
+          <li><strong>EZTO Token:</strong> the core of the ecosystem.</li>
+          <li><strong>EZTO Swap:</strong> a simple, non-custodial trading interface.</li>
+          <li><strong>EZTO Staking:</strong> rewards for long-term holders.</li>
+          <li><strong>Payments:</strong> EZTO as a payment option for online merchants.</li>
+        </ul>
+        <p>EZTO works with existing Solana wallets (Phantom, Solflare, Backpack). We do not hold user funds.</p>
+      </section>
+
+      <section id="team">
+        <h2><span class="wp-num">07</span>Team</h2>
+        <p>EZTO is led by an <strong>independent founder</strong> and built in public. Development uses modern AI-assisted engineering tools, and all code is open source so the community can review it.</p>
+        <p>As the project grows, we will grow the team with contributors from the community, and new members will be announced publicly.</p>
+      </section>
+
+      <section id="get-involved">
+        <h2><span class="wp-num">08</span>How to Get Involved</h2>
+        <ul>
+          <li><strong>Join the community:</strong> follow us and take part in discussions.</li>
+          <li><strong>Use EZTO:</strong> swap, stake and use EZTO as products launch.</li>
+          <li><strong>Contribute:</strong> review the code, suggest ideas and report bugs.</li>
+          <li><strong>Spread the word:</strong> share EZTO with your network.</li>
+        </ul>
+        <p class="wp-links">
+          <a href="https://t.me/Eztocoin" target="_blank" rel="noopener">Telegram</a>
+          <a href="https://x.com/EZTOCOIN" target="_blank" rel="noopener">X</a>
+          <a href="https://www.tiktok.com/@eztocoin" target="_blank" rel="noopener">TikTok</a>
+          <a href="https://www.instagram.com/eztocoin" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://github.com/Abbe0102/EZTOCOIN" target="_blank" rel="noopener">GitHub</a>
+        </p>
+        <div class="wp-callout">
+          <strong>Always verify the official mint address on our website.</strong> Beware of fake tokens using the EZTO name.
+        </div>
+      </section>
+
+      <section id="risks">
+        <h2><span class="wp-num">09</span>Risks &amp; Disclaimer</h2>
+        <p><strong>Please read carefully.</strong></p>
+        <ul>
+          <li>EZTO is a community meme token. It is <strong>not</strong> an investment contract, security, share or financial product, and it carries <strong>no promise of profit, return or value</strong>.</li>
+          <li>Crypto assets are highly volatile. The price of EZTO may go up or down sharply, and may go to zero.</li>
+          <li>The roadmap describes plans, not guarantees. Features may change, be delayed or not be delivered.</li>
+          <li>Smart contracts and blockchains can contain bugs or be attacked.</li>
+          <li>Laws on crypto assets differ by country and may change. It is your responsibility to make sure that buying or using EZTO is legal where you live.</li>
+          <li>Only use money you can afford to lose. Nothing in this document is financial, legal or tax advice. Do your own research (DYOR).</li>
+        </ul>
+      </section>
+
+      <footer class="wp-end">
+        <img src="assets/mark.svg" alt="" width="56" height="56">
+        <p>EZTO · Vision first, hype later.</p>
+      </footer>
+    </article>
+  </main>
+
+  <script>
+    document.getElementById('save-pdf').addEventListener('click', () => window.print());
+  </script>
+</body>
+</html>
