@@ -13,7 +13,7 @@ A clean community token on **Solana**: 0% tax, fixed supply, no freeze authority
 ## Repository layout
 
 ```
-docs/WHITEPAPER.md      Whitepaper (v2 draft)
+docs/WHITEPAPER.md      Whitepaper (v2 draft); mirrored at website/whitepaper.html
 docs/LAUNCH_GUIDE.md    Step-by-step launch guide
 website/                Project website (static, deployed to GitHub Pages)
 brand/                  Logo, icons, social assets, brand guide
