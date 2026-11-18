@@ -17,6 +17,7 @@ docs/WHITEPAPER.md      Whitepaper (v2 draft); mirrored at website/whitepaper.ht
 docs/LAUNCH_GUIDE.md    Step-by-step launch guide
 website/                Project website (static, deployed to GitHub Pages)
 brand/                  Logo, icons, social assets, brand guide
+marketing/              Social media content pack (posts, captions, TikTok scripts)
 token/                  Token launch code (TypeScript)
   src/config.ts         Token settings & allocations
   src/launch.ts         Mint, distribute, revoke-authority instructions
