@@ -1,5 +1,7 @@
 # EZTOCOIN (EZTO)
 
+🌐 **https://eztocoin.com**
+
 A clean community token on **Solana**: 0% tax, fixed supply, no freeze authority, locked liquidity. It starts as a meme coin and grows into a simple, non-custodial trading platform.
 
 | | |
