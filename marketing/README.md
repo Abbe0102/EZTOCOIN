@@ -53,7 +53,7 @@ Between posts: reply to comments, repost community content, and invite TikTok vi
 >
 > Vision first, hype later. EZTO is a clean community token on Solana: 0% tax, fixed supply, built in public.
 >
-> 🌐 Website & whitepaper: [website link]
+> 🌐 Website & whitepaper: eztocoin.com
 > ⚠️ EZTO has not launched yet. The official contract address will be posted ONLY on our website and pinned here. Admins will never DM you first.
 
 ### 2 · Website is live (`2-website.png`)
@@ -66,7 +66,7 @@ Between posts: reply to comments, repost community content, and invite TikTok vi
 > → Roadmap
 > → All official links
 >
-> [website link]
+> eztocoin.com
 
 **Instagram**
 > The EZTO website is live 🚀
@@ -78,7 +78,7 @@ Between posts: reply to comments, repost community content, and invite TikTok vi
 > #EZTO #Solana #crypto
 
 **Telegram**
-> 🚀 Our website is live: [website link]
+> 🚀 Our website is live: eztocoin.com
 > Whitepaper, tokenomics and roadmap are all there. Bookmark it: the official contract address will be published there at launch.
 
 ### 3 · What is EZTO? (`3-what.png`)
