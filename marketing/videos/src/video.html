@@ -94,6 +94,27 @@
 
   .bigstat { font-size: 230px; line-height: .95; font-weight: 700; letter-spacing: -0.04em; }
   .addr { font-family: ui-monospace, Menlo, monospace; font-size: 40px; color: var(--muted); letter-spacing: .02em; }
+
+  /* Phone mockup with scrolling site */
+  .phone { align-self: center; width: 620px; height: 1180px; border-radius: 80px; padding: 22px; background: #11173a;
+    border: 4px solid #2a3470; box-shadow: 0 40px 120px rgba(59,130,246,.35); }
+  .phone .screen { width: 100%; height: 100%; border-radius: 60px; overflow: hidden; position: relative; background: var(--bg); }
+  .phone .screen img { width: 100%; display: block; animation: scrollsite 8.5s cubic-bezier(.45,0,.25,1) calc(var(--start) + 1s) both; }
+  @keyframes scrollsite { 0%, 8% { transform: translateY(0); } 100% { transform: translateY(-4800px); } }
+  .tags { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+  .tag { padding: 20px 38px; border-radius: 999px; font-size: 48px; font-weight: 700; background: var(--surface); border: 3px solid var(--line); }
+  /* Code card */
+  .code { font-family: ui-monospace, Menlo, monospace; font-size: 34px; line-height: 1.5; color: var(--text-2); background: #050816; border: 3px solid var(--line); border-radius: 28px; padding: 34px 38px; }
+  .code .k { color: var(--purple); } .code .f { color: var(--teal); } .code .c { color: var(--muted); }
+  /* Roadmap phases */
+  .phases { display: grid; gap: 26px; width: 100%; }
+  .phase { display: grid; grid-template-columns: 190px 1fr; align-items: center; gap: 28px; padding: 36px 40px; }
+  .phase .k { font-size: 28px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+  .phase .t { font-size: 56px; font-weight: 700; line-height: 1.05; }
+  .phase .d { font-size: 32px; color: var(--muted); margin-top: 6px; }
+  .phase.now { border-color: transparent; background: linear-gradient(var(--surface), var(--surface)) padding-box, var(--grad) border-box; }
+  .phase.now .k { color: var(--teal); }
+  .badge { display: inline-block; margin-top: 10px; font-size: 26px; font-weight: 700; padding: 6px 16px; border-radius: 999px; background: rgba(46,242,200,.14); color: var(--teal); }
 </style>
 </head>
 <body>
@@ -198,6 +219,71 @@ const VIDEOS = {
         ${A(8.9, `<i style="background:var(--s5)"></i><span>Team<small>12-mo cliff, then 24-mo vesting</small></span><b>10%</b>`)}
       </div>`),
     END(15.6, 20, `All public.<br><span class="grad">eztocoin.com</span>`),
+  ]},
+
+  'manifesto': { total: 18, html: [
+    S(0, 3.8, `
+      ${A(0, `<div class="h2">Most meme coins:</div>`)}
+      ${A(.6, `<div class="card"><div class="bad"><span class="ic">✕</span><span>Hype first</span></div></div>`, 'pop')}
+      ${A(1.3, `<div class="card"><div class="bad"><span class="ic">✕</span><span>Nothing behind it</span></div></div>`, 'pop')}`),
+    S(3.8, 7.4, `
+      <img class="mark spin" src="mark.svg" style="--d:0s" alt="">
+      ${A(.7, `<div class="h1">EZTO <span class="grad">flips it.</span></div>`)}`, 'center'),
+    S(7.4, 11.6, `
+      ${A(0, `<div class="h1">Vision first,</div>`)}
+      ${A(.7, `<div class="h1 grad">hype later.</div>`)}`, 'center'),
+    S(11.6, 14.8, `
+      ${A(0, `<div class="h3">A meme coin with a plan:</div>`)}
+      <div class="tags">
+        ${A(.5, `<div class="tag">✓ Clean token</div>`, 'pop')}
+        ${A(.9, `<div class="tag">✓ Built in public</div>`, 'pop')}
+        ${A(1.3, `<div class="tag">✓ Real roadmap</div>`, 'pop')}
+      </div>`, 'center'),
+    END(14.8, 18, `Follow <span class="grad">the build.</span>`),
+  ]},
+
+  'mint-authority': { total: 20, html: [
+    S(0, 3.6, `
+      ${A(0, `<div class="pill">Explained</div>`, 'pop')}
+      ${A(.25, `<div class="h1">Can the dev just <span class="grad">print more</span> coins?</div>`)}`),
+    S(3.6, 7.8, `
+      ${A(0, `<div class="p">On Solana, every token has a</div>`)}
+      ${A(.4, `<div class="h1 grad">mint authority.</div>`)}
+      ${A(1.2, `<div class="p">Whoever holds it can create new coins. Anytime.</div>`)}`),
+    S(7.8, 11.4, `
+      ${A(0, `<div class="h2">If it's not removed:</div>`)}
+      ${A(.6, `<div class="card"><div class="bad"><span class="ic">✕</span><span>More coins appear</span></div></div>`, 'pop')}
+      ${A(1.2, `<div class="card"><div class="bad"><span class="ic">✕</span><span>Your share shrinks</span></div></div>`, 'pop')}`),
+    S(11.4, 16, `
+      ${A(0, `<div class="card"><div class="good"><span class="ic">✓</span><span>EZTO's launch code <span class="grad">revokes it.</span> Forever.</span></div></div>`, 'pop')}
+      ${A(.8, `<div class="code"><span class="c">// token/src/launch.ts</span><br><span class="k">export function</span> <span class="f">revokeMintAuthority</span>…<br><span class="c">// new authority:</span> <span class="k">null</span></div>`)}
+      ${A(1.6, `<div class="p">Open source. <span class="grad">Check it yourself.</span></div>`)}`),
+    END(16, 20, `Fixed supply.<br><span class="grad">Forever.</span>`),
+  ]},
+
+  'website': { total: 18, html: [
+    S(0, 3.6, `
+      ${A(0, `<div class="pill">● Now live</div>`, 'pop')}
+      ${A(.25, `<div class="h1">EZTO has<br>a <span class="grad">home.</span></div>`)}
+      ${A(1.1, `<div class="p">eztocoin.com</div>`)}`),
+    S(3.6, 14, `
+      ${A(0, `<div class="phone"><div class="screen"><img src="site-mobile.jpg" alt=""></div></div>`, 'pop')}`, 'center'),
+    END(14, 18, `Whitepaper. Tokenomics.<br><span class="grad">Roadmap.</span>`),
+  ]},
+
+  'roadmap': { total: 20, html: [
+    S(0, 3.4, `
+      ${A(0, `<div class="pill">Roadmap</div>`, 'pop')}
+      ${A(.25, `<div class="h1">Where EZTO<br>is <span class="grad">going.</span></div>`)}`),
+    S(3.4, 15.8, `
+      ${A(0, `<div class="h3">One phase at a time.</div>`)}
+      <div class="phases">
+        ${A(.6, `<span class="k">Phase 1</span><div><div class="t">Launch</div><div class="d">Token, liquidity, locks</div><span class="badge">In progress</span></div>`, 'card phase now pop')}
+        ${A(3.2, `<span class="k">Phase 2</span><div><div class="t">Growth</div><div class="d">Listings, campaigns, staking</div></div>`, 'card phase')}
+        ${A(5.8, `<span class="k">Phase 3</span><div><div class="t">EZTO Swap</div><div class="d">Trade, keep your own keys</div></div>`, 'card phase')}
+        ${A(8.4, `<span class="k">Phase 4</span><div><div class="t">Ecosystem</div><div class="d">Payments, tools, governance</div></div>`, 'card phase')}
+      </div>`),
+    END(15.8, 20, `No dates until it's <span class="grad">ready.</span>`),
   ]},
 };
 
