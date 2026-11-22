@@ -1,6 +1,6 @@
 # EZTO Social Content Pack 1: "Vision first"
 
-More in this folder: [`telegram/`](telegram/README.md) (group setup, bot, rules, weekly activities) and [`tiktok/`](tiktok/building-in-public.md) ("Building EZTO in public" series, 10 episodes).
+More in this folder: [`telegram/`](telegram/README.md) (group setup, bot, rules, weekly activities), [`tiktok/`](tiktok/building-in-public.md) ("Building EZTO in public" series, 10 episodes) and [`videos/`](videos/README.md) (4 ready-to-post vertical videos).
 
 Pre-launch content: introduce EZTO, push people to the website and Telegram, and warn about fake tokens.
 All images are in `posts/` (1080×1350, works for Instagram feed and X).
