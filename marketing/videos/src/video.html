@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+  EZTO vertical video engine (1080x1920).
+  Open with ?v=<id>. Every animation is a paused CSS animation; render.js sets the
+  global time frame by frame (window.seek(t)), so output is deterministic.
+-->
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=block" rel="stylesheet">
+<style>
+  :root {
+    --teal: #2EF2C8; --blue: #3B82F6; --purple: #A855F7;
+    --grad: linear-gradient(135deg, var(--teal), var(--blue) 50%, var(--purple));
+    --bg: #070B1C; --surface: #0E1430; --line: #222B55;
+    --text: #F5F7FF; --text-2: #C3CAE6; --muted: #9AA4C7;
+    --red: #FF5C7A; --green: #2EF2C8;
+    --s1: #14A88C; --s2: #3B82F6; --s3: #B88A12; --s4: #A855F7; --s5: #E0559A;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); }
+  body { color: var(--text); font-family: 'Space Grotesk', sans-serif; position: relative; }
+
+  /* Background: drifting glows + grid */
+  .glow { position: absolute; border-radius: 50%; filter: blur(40px); pointer-events: none; }
+  .g1 { width: 1100px; height: 1100px; left: -300px; top: -250px; background: radial-gradient(closest-side, rgba(59,130,246,.30), transparent 70%); animation: drift1 30s linear both; }
+  .g2 { width: 1000px; height: 1000px; right: -350px; bottom: -200px; background: radial-gradient(closest-side, rgba(168,85,247,.24), transparent 70%); animation: drift2 30s linear both; }
+  @keyframes drift1 { to { transform: translate(260px, 380px); } }
+  @keyframes drift2 { to { transform: translate(-260px, -320px); } }
+  .grid { position: absolute; inset: 0; pointer-events: none;
+    background-image: linear-gradient(#ffffff07 1px, transparent 1px), linear-gradient(90deg, #ffffff07 1px, transparent 1px);
+    background-size: 72px 72px; mask-image: radial-gradient(900px 1300px at 50% 45%, #000 30%, transparent 80%); }
+
+  /* Progress bar (top) + brand tag */
+  .progress { position: absolute; left: 80px; right: 80px; top: 120px; height: 6px; border-radius: 3px; background: #ffffff14; overflow: hidden; }
+  .progress i { display: block; height: 100%; background: var(--grad); transform-origin: left; animation: prog var(--total) linear both; }
+  @keyframes prog { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .brand { position: absolute; left: 80px; top: 160px; display: flex; align-items: center; gap: 16px; }
+  .brand img { height: 56px; }
+  .brand span { font-size: 26px; font-weight: 700; letter-spacing: .14em; color: var(--teal); text-transform: uppercase; }
+
+  /* Scenes. Safe area keeps clear of TikTok UI (right rail + bottom caption). */
+  .scene { position: absolute; left: 80px; right: 160px; top: 320px; bottom: 430px;
+    display: flex; flex-direction: column; justify-content: center; gap: 44px; opacity: 0;
+    animation: scene var(--dur) linear var(--start) both; }
+  .scene.center { align-items: center; text-align: center; right: 80px; }
+  @keyframes scene { 0% { opacity: 0; } 5% { opacity: 1; } 94% { opacity: 1; } 100% { opacity: 0; } }
+
+  .a { opacity: 0; animation: rise .55s cubic-bezier(.2,.8,.2,1) calc(var(--start) + var(--d, 0s)) both; }
+  .a.pop { animation-name: pop; }
+  .a.wipe { animation-name: wipe; animation-duration: .7s; }
+  @keyframes rise { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: none; } }
+  @keyframes pop { 0% { opacity: 0; transform: scale(.6); } 70% { opacity: 1; transform: scale(1.06); } 100% { opacity: 1; transform: scale(1); } }
+  @keyframes wipe { from { opacity: 1; clip-path: inset(0 100% 0 0); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
+
+  .grad { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .h1 { font-size: 124px; line-height: 1.02; letter-spacing: -0.035em; font-weight: 700; }
+  .h2 { font-size: 100px; line-height: 1.05; letter-spacing: -0.03em; font-weight: 700; }
+  .h3 { font-size: 68px; line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; }
+  .p { font-size: 50px; line-height: 1.35; color: var(--text-2); }
+  .small { font-size: 38px; color: var(--muted); }
+  .num { display: inline-grid; place-items: center; width: 112px; height: 112px; border-radius: 30px; background: var(--grad); color: #050816; font-size: 60px; font-weight: 700; }
+
+  .card { background: var(--surface); border: 3px solid var(--line); border-radius: 40px; padding: 46px 50px; }
+  .bad, .good { display: flex; align-items: center; gap: 30px; font-size: 58px; font-weight: 700; line-height: 1.18; }
+  .bad .ic, .good .ic { flex: 0 0 auto; width: 96px; height: 96px; border-radius: 50%; display: grid; place-items: center; font-size: 56px; font-weight: 700; }
+  .bad .ic { background: rgba(255,92,122,.15); color: var(--red); border: 3px solid rgba(255,92,122,.5); }
+  .good .ic { background: rgba(46,242,200,.12); color: var(--green); border: 3px solid rgba(46,242,200,.5); }
+  .bad { color: var(--text-2); }
+  .strike { background: linear-gradient(var(--red), var(--red)) no-repeat 0 58% / 0% 7px;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+    animation: strike .5s ease-out calc(var(--start) + var(--sd, 1.6s)) both; }
+  @keyframes strike { from { background-size: 0% 7px; opacity: 1; } to { background-size: 100% 7px; opacity: .55; } }
+  .pill { align-self: flex-start; display: inline-flex; align-items: center; gap: 16px; padding: 14px 30px; border-radius: 999px; font-size: 32px; font-weight: 700;
+    background: rgba(46,242,200,.08); border: 3px solid rgba(46,242,200,.35); color: var(--teal); }
+  .pill.warn { background: rgba(255,92,122,.1); border-color: rgba(255,92,122,.5); color: var(--red); }
+  .center .pill { align-self: center; }
+
+  .mark { width: 560px; filter: drop-shadow(0 0 90px rgba(59,130,246,.5)); }
+  .mark.spin { animation: markin 1s cubic-bezier(.2,.8,.2,1) calc(var(--start) + var(--d, 0s)) both; }
+  @keyframes markin { from { opacity: 0; transform: scale(.5) rotate(-25deg); } to { opacity: 1; transform: none; } }
+  .cta { display: inline-flex; align-items: center; gap: 18px; padding: 30px 54px; border-radius: 999px; background: var(--grad); color: #050816; font-size: 50px; font-weight: 700; }
+
+  /* Tokenomics bar */
+  .bar { display: flex; gap: 6px; height: 90px; width: 100%; }
+  .bar span { height: 100%; transform-origin: left; animation: grow .6s cubic-bezier(.2,.8,.2,1) calc(var(--start) + var(--d)) both; }
+  .bar span:first-child { border-radius: 16px 0 0 16px; } .bar span:last-child { border-radius: 0 16px 16px 0; }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .legend { display: grid; gap: 26px; width: 100%; }
+  .legend div { display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 26px; font-size: 50px; }
+  .legend i { width: 40px; height: 40px; border-radius: 10px; }
+  .legend b { font-size: 58px; }
+  .legend small { display: block; font-size: 34px; color: var(--muted); margin-top: 2px; }
+
+  .bigstat { font-size: 230px; line-height: .95; font-weight: 700; letter-spacing: -0.04em; }
+  .addr { font-family: ui-monospace, Menlo, monospace; font-size: 40px; color: var(--muted); letter-spacing: .02em; }
+</style>
+</head>
+<body>
+<div class="glow g1"></div><div class="glow g2"></div><div class="grid"></div>
+<div class="progress"><i></i></div>
+<div class="brand"><img src="logo.svg" alt=""></div>
+<div id="stage"></div>
+
+<script>
+/* Scene helpers ---------------------------------------------------------- */
+const S = (start, end, html, cls = '') =>
+  `<section class="scene ${cls}" style="--start:${start}s;--dur:${end - start}s">${html}</section>`;
+const A = (d, html, cls = '', extra = '') => `<div class="a ${cls}" style="--d:${d}s;${extra}">${html}</div>`;
+
+const END = (start, end, title) => S(start, end, `
+  <img class="mark spin" src="mark.svg" style="--d:0s" alt="">
+  ${A(.5, `<div class="h2">${title}</div>`)}
+  ${A(1.1, `<div class="cta">Join our Telegram 👉 link in bio</div>`, 'pop')}
+  ${A(1.6, `<div class="small">eztocoin.com</div>`)}
+`, 'center');
+
+/* Videos ----------------------------------------------------------------- */
+const VIDEOS = {
+  'red-flags': { total: 22, html: [
+    S(0, 3.4, `
+      ${A(0, `<div class="pill warn">⚠️ Before you buy</div>`, 'pop')}
+      ${A(.25, `<div class="h1"><span class="grad">3 red flags</span><br>in ANY<br>meme coin.</div>`)}
+      ${A(1.2, `<div class="p">Save this. 👇</div>`)}`),
+    S(3.4, 8.2, `
+      ${A(0, `<div class="num">1</div>`, 'pop')}
+      ${A(.2, `<div class="h2">Hidden tax</div>`)}
+      ${A(.6, `<div class="card"><div class="bad"><span class="ic">✕</span><span class="strike" style="--sd:2.2s">You sell 100,<br>you get 90</span></div></div>`)}
+      ${A(2.6, `<div class="card"><div class="good"><span class="ic">✓</span><span>EZTO: <span class="grad">0% tax</span></span></div></div>`, 'pop')}`),
+    S(8.2, 13, `
+      ${A(0, `<div class="num">2</div>`, 'pop')}
+      ${A(.2, `<div class="h2">The dev can print more</div>`)}
+      ${A(.6, `<div class="card"><div class="bad"><span class="ic">✕</span><span class="strike" style="--sd:2.2s">Supply grows,<br>your share shrinks</span></div></div>`)}
+      ${A(2.6, `<div class="card"><div class="good"><span class="ic">✓</span><span>EZTO: <span class="grad">mint authority revoked</span></span></div></div>`, 'pop')}`),
+    S(13, 17.8, `
+      ${A(0, `<div class="num">3</div>`, 'pop')}
+      ${A(.2, `<div class="h2">Liquidity can be pulled</div>`)}
+      ${A(.6, `<div class="card"><div class="bad"><span class="ic">✕</span><span class="strike" style="--sd:2.2s">One click,<br>the pool is gone</span></div></div>`)}
+      ${A(2.6, `<div class="card"><div class="good"><span class="ic">✓</span><span>EZTO: <span class="grad">LP burned</span> at launch</span></div></div>`, 'pop')}`),
+    END(17.8, 22, `Clean token.<br><span class="grad">No surprises.</span>`),
+  ]},
+
+  'what-is-ezto': { total: 18, html: [
+    S(0, 3.2, `
+      ${A(0, `<div class="pill">EZTO 101</div>`, 'pop')}
+      ${A(.25, `<div class="h1">What is<br><span class="grad">EZTO</span>?</div>`)}
+      ${A(1.1, `<div class="p">15 seconds. Go. ⏱️</div>`)}`),
+    S(3.2, 6.8, `
+      ${A(0, `<div class="num">1</div>`, 'pop')}
+      ${A(.2, `<div class="h2">A <span class="grad">clean token</span> on Solana</div>`)}
+      ${A(.8, `<div class="p">0% tax · fixed supply · no freeze authority</div>`)}`),
+    S(6.8, 10.4, `
+      ${A(0, `<div class="num">2</div>`, 'pop')}
+      ${A(.2, `<div class="h2">Built <span class="grad">in public</span></div>`)}
+      ${A(.8, `<div class="p">Open-source code anyone can read and check.</div>`)}`),
+    S(10.4, 14, `
+      ${A(0, `<div class="num">3</div>`, 'pop')}
+      ${A(.2, `<div class="h2">A path to <span class="grad">real products</span></div>`)}
+      ${A(.8, `<div class="p">Next: EZTO Swap, simple trading where you keep your own keys.</div>`)}`),
+    END(14, 18, `Vision first,<br><span class="grad">hype later.</span>`),
+  ]},
+
+  'fake-token': { total: 18, html: [
+    S(0, 3.6, `
+      ${A(0, `<div class="pill warn">🛡️ Scam alert</div>`, 'pop')}
+      ${A(.25, `<div class="h1">Someone <span class="grad">will</span> fake EZTO.</div>`)}
+      ${A(1.2, `<div class="p">Here's how not to fall for it.</div>`)}`),
+    S(3.6, 7.6, `
+      ${A(0, `<div class="h2">EZTO has<br><span class="grad">not launched</span> yet.</div>`)}
+      ${A(.9, `<div class="card"><div class="bad"><span class="ic">✕</span><span>Any "EZTO" token today is fake</span></div></div>`, 'pop')}`),
+    S(7.6, 11.6, `
+      ${A(0, `<div class="h3">The real address will appear in <span class="grad">2 places only</span>:</div>`)}
+      ${A(.7, `<div class="card"><div class="good"><span class="ic">✓</span><span>eztocoin.com</span></div></div>`, 'pop')}
+      ${A(1.2, `<div class="card"><div class="good"><span class="ic">✓</span><span>Pinned in our Telegram</span></div></div>`, 'pop')}`),
+    S(11.6, 14.6, `
+      ${A(0, `<div class="h2">We will <span class="grad">never</span>:</div>`)}
+      ${A(.5, `<div class="card"><div class="bad"><span class="ic">✕</span><span>DM you first</span></div></div>`)}
+      ${A(.9, `<div class="card"><div class="bad"><span class="ic">✕</span><span>Ask for your seed phrase</span></div></div>`)}`),
+    END(14.6, 18, `Share this.<br><span class="grad">Stay safe.</span> 🛡️`),
+  ]},
+
+  'tokenomics': { total: 20, html: [
+    S(0, 3.4, `
+      ${A(0, `<div class="pill">Tokenomics</div>`, 'pop')}
+      ${A(.25, `<div class="bigstat grad">1B</div>`, 'pop')}
+      ${A(.7, `<div class="h2">EZTO. Fixed forever.</div>`)}
+      ${A(1.3, `<div class="p">Here's where every token goes. 👇</div>`)}`, 'center'),
+    S(3.4, 15.6, `
+      ${A(0, `<div class="h3">Every token, accounted for.</div>`)}
+      <div class="bar">
+        <span style="flex:40;background:var(--s1);--d:.5s"></span><span style="flex:20;background:var(--s2);--d:2.6s"></span><span style="flex:15;background:var(--s3);--d:4.7s"></span><span style="flex:15;background:var(--s4);--d:6.8s"></span><span style="flex:10;background:var(--s5);--d:8.9s"></span>
+      </div>
+      <div class="legend">
+        ${A(.5, `<i style="background:var(--s1)"></i><span>Liquidity<small>LP burned at launch</small></span><b>40%</b>`)}
+        ${A(2.6, `<i style="background:var(--s2)"></i><span>Platform<small>6-mo cliff, then 24-mo vesting</small></span><b>20%</b>`)}
+        ${A(4.7, `<i style="background:var(--s3)"></i><span>Marketing<small>partly vested over 12 months</small></span><b>15%</b>`)}
+        ${A(6.8, `<i style="background:var(--s4)"></i><span>Staking<small>locked until staking is live</small></span><b>15%</b>`)}
+        ${A(8.9, `<i style="background:var(--s5)"></i><span>Team<small>12-mo cliff, then 24-mo vesting</small></span><b>10%</b>`)}
+      </div>`),
+    END(15.6, 20, `All public.<br><span class="grad">eztocoin.com</span>`),
+  ]},
+};
+
+/* Boot + seek ------------------------------------------------------------ */
+const id = new URLSearchParams(location.search).get('v') || 'red-flags';
+const video = VIDEOS[id];
+document.documentElement.style.setProperty('--total', video.total + 's');
+document.getElementById('stage').innerHTML = video.html.join('');
+window.VIDEO_TOTAL = video.total;
+window.VIDEO_IDS = Object.keys(VIDEOS);
+window.seek = (t) => {
+  for (const anim of document.getAnimations()) { anim.pause(); anim.currentTime = t * 1000; }
+};
+window.seek(0);
+</script>
+</body>
+</html>
