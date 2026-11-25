@@ -1,493 +1,339 @@
 # EZTO on X: 30-day playbook
 
-Goal for the month: **400 → 1,000 real followers**, and X as the place where crypto people check that EZTO is serious.
-Account: **@EZTOCOIN** · Website: **eztocoin.com** · Images: `marketing/posts/` · Videos: `marketing/videos/out/`
+Goal for the month: **400 → 1,000 real followers**, and X as the place where people get to know **the founder** behind EZTO.
+Account: **@EZTOCOIN** · Website: **eztocoin.com**
+
+**Division of roles:** the images (`marketing/posts/`) and videos (`marketing/videos/out/`) explain the token: tax, tokenomics, roadmap, safety.
+**Text posts on X do something else:** the founder's diary, opinions, real behind-the-scenes moments, questions and the occasional joke. They should not repeat what the images and videos already say.
 
 ---
 
-## 1. Profile checklist
+## 1. Voice guide: sound like a person
+
+- **Write how you talk.** Short sentences. Lowercase is fine. Half-finished thoughts are fine.
+- **One idea per post.** Not a list of five features.
+- **Use "I"**, not "we" all the time. People follow people.
+- **Few emojis** (0–1 per post). **No hashtags** on most posts.
+- **No checkmark lists, no em dashes, no "Here's the thing", no "Let's dive in".** Those scream template.
+- **Don't** end every post with the slogan or the link. Most posts should have **no link at all**; X shows link posts to fewer people anyway.
+- **Real moments only.** Never invent a story. Posts marked **[ ]** need your own words; fill them in or skip them.
+- **Read it out loud before posting.** If it doesn't sound like you, change words until it does. Every post below is a starting point, not a script.
+
+---
+
+## 2. Profile checklist
 - **Name:** `EZTO | $EZTO`
-- **Bio:** `Vision first, hype later ⚡ $EZTO is a clean community token on Solana: 0% tax, fixed supply. From meme coin to a simple trading platform.`
+- **Bio:** `building $EZTO in public. clean solana meme coin: 0% tax, mint revoked, LP burned. vision first, hype later.`
 - **Website field:** `eztocoin.com`
 - **Avatar / header:** `brand/social/ezto-avatar-1000.png` · `brand/social/ezto-x-banner-1500x500.png`
-- **Pinned post:** the safety post (Day 3), and later the launch announcement.
+- **Pinned post:** Day 6 (the fake-token warning), later the launch announcement.
 
 ---
 
-## 2. Daily routine (15 minutes)
+## 3. Daily routine (15 minutes)
 
 | Minutes | Do this |
 |---|---|
-| 3 | **Post** the tweet of the day (below). Best times to test: 14:00–16:00 and 20:00–22:00 CET (US + EU awake). |
-| 8 | **Reply** to 5–10 posts from bigger Solana / crypto accounts. Add something useful: an opinion, a tip, a question. Never "check my coin". |
-| 2 | **Answer** every reply and mention you got. Replies on your own posts boost reach. |
-| 2 | **Like / repost** 2–3 posts from small, honest projects and community members. |
+| 3 | **Post** today's text post (below). Images and videos go out on their own days per `marketing/videos/README.md`. |
+| 8 | **Reply** to 5–10 posts from bigger Solana / crypto accounts with a real opinion or question. Never "check my coin". |
+| 2 | **Answer** every reply on your own posts, in your own words. |
+| 2 | **Like / repost** 2–3 posts from small honest builders. |
 
-**Who to reply to:** Solana ecosystem accounts (wallets, DEXs, Solana news accounts), crypto educators, and other small "build in public" founders. Search X for `Solana memecoin`, `build in public crypto`, `rug pull` and join those conversations.
-
-**Spaces:** once a week, join a Solana or meme coin Space as a listener; raise your hand when the topic fits and introduce EZTO in **one sentence**: *"I'm building EZTO, a clean Solana meme token: 0% tax, mint revoked, LP burned, everything open source."*
-
----
-
-## 3. Rules
-- **No price talk.** No "100x", "moon", "early = rich", "don't miss out".
-- **No paid shills, bought followers or engagement pods.** They are easy to spot and kill trust.
-- **No tagging big accounts in your own posts** to beg for attention. Earn it in their replies.
-- **Never DM people first** to promote EZTO. It looks exactly like a scam.
-- Use **1–3 hashtags** at most: `#EZTO #Solana` plus one topic tag. The `$EZTO` cashtag in text is fine.
-- Add an **image or video** to at least every second post (from `marketing/posts/` or `marketing/videos/out/`).
+Search X for `solana memecoin`, `build in public`, `rug pull`, `solana dev` and join those conversations.
+Once a week: listen in on a Solana Space; if it fits, introduce yourself in one sentence: *"I'm building EZTO, a clean Solana meme coin, everything open source."*
 
 ---
 
-## 4. 30 days of posts
+## 4. Rules
+- No price talk, no "100x", no "moon", no "don't miss out".
+- No bought followers, paid shills or engagement pods.
+- Never DM people first to promote EZTO.
+- Don't tag big accounts in your own posts to beg for attention.
 
-Each post is under 280 characters. 🖼️ = attach an image, 🎬 = attach a video.
+---
 
-### Week 1: Who we are
+## 5. 30 text posts
 
-**Day 1** 🖼️ `1-manifesto.png`
+Types: 📓 diary (real moments) · 💭 opinion · ❓ question · 😅 humor · 🛡️ safety · ✍️ needs your own words
+
+**Day 1** 📓
 ```
-Vision first, hype later. ⚡
+been working on EZTO for a while now and finally feel ready to talk about it properly.
 
-$EZTO is a meme coin with a plan: a clean community token on Solana, built in public, one phase at a time.
+yes it's a meme coin. but i want to do it right: no tax, no dev mint, liquidity burned, code public.
 
-eztocoin.com
-```
-
-**Day 2** 🎬 `what-is-ezto.mp4`
-```
-What is EZTO, in 3 lines:
-
-1️⃣ A clean token on Solana: 0% tax, fixed supply
-2️⃣ Built in public: open-source code
-3️⃣ A path to real products, starting with EZTO Swap
-
-#EZTO #Solana
+gonna share the whole build here.
 ```
 
-**Day 3** 🖼️ `7-safety.png` (📌 pin this)
+**Day 2** 📓
 ```
-⚠️ EZTO has NOT launched yet.
+redid the logo this week. we had like 5 different versions floating around, 3D, gold, metal... none of them looked good at wallet size.
 
-Any token using the EZTO name today is not ours.
-
-The official address will only be posted on eztocoin.com and pinned in our Telegram. We never DM first. We never ask for your seed phrase.
+now it's one. the E with the arrow. simple wins.
 ```
 
-**Day 4**
+**Day 3** ❓
 ```
-Most meme coins: hype first, product never.
+what made you stop trusting meme coins?
 
-We're doing it the other way around. Website, whitepaper and launch code first. Hype can come later.
-
-Vision first, hype later. $EZTO
+genuinely asking. trying to build something that fixes at least some of it
 ```
 
-**Day 5** 🎬 `website.mp4`
+**Day 4** 💭
 ```
-EZTO has a home 🏠
+a meme coin doesn't need a 40 page whitepaper.
 
-Whitepaper, tokenomics, roadmap: all public.
-
-Bookmark it. It's the only place the real contract address will ever appear.
-
-eztocoin.com
+it needs a few things you can check yourself in 10 seconds. tax, mint authority, liquidity. the rest is decoration
 ```
 
-**Day 6** (question)
+**Day 5** 📓
 ```
-Honest question for Solana degens:
+fun fact: everything EZTO has so far, the website, the telegram, the socials, was set up from my phone.
 
-What's the #1 thing that makes you trust a new meme coin?
-
-A) LP burned
-B) Mint revoked
-C) Doxxed team
-D) Active community
-
-👇
+no laptop yet. slow, but it works lol
 ```
 
-**Day 7** (build update)
+**Day 6** 🛡️ (📌 pin this)
 ```
-Week 1 of building $EZTO in public:
+pinning this because it will happen at some point:
 
-✅ Whitepaper v2
-✅ New logo & brand
-✅ Website live: eztocoin.com
-✅ Telegram set up with anti-scam protection
+someone will launch a fake EZTO before we do. if the address isn't on eztocoin.com, it's not us.
 
-Next: more content, more community. What should we explain next?
+and i will never dm you first.
 ```
 
-### Week 2: Trust & education
-
-**Day 8** 🎬 `red-flags.mp4`
+**Day 7** 📓
 ```
-3 red flags before you buy ANY meme coin 🚩
+bought eztocoin.com this week.
 
-1. Hidden buy/sell tax
-2. Dev can still mint more
-3. Liquidity that can be pulled
-
-$EZTO: 0% tax, mint revoked, LP burned.
-
-Save this.
+weird how a domain name is the moment it started feeling real
 ```
 
-**Day 9**
+**Day 8** 📓
 ```
-"0% tax" sounds boring.
+spent an evening fighting github pages to get the site online. 3 failed deploys before it finally worked.
 
-It means: you buy 100, you hold 100. You sell 100, you get 100.
-
-No hidden fees. No "marketing wallet" taking a cut of every trade.
-
-Boring is good. $EZTO
+building in public means you also get to see the boring parts
 ```
 
-**Day 10** 🎬 `mint-authority.mp4`
+**Day 9** 💭
 ```
-Can the dev just print more coins?
+the dev wallet thing still blows my mind. project launches, dev holds 30% unlocked, everyone acts surprised when it dumps.
 
-On Solana, whoever holds the "mint authority" can.
-
-EZTO's launch code revokes it. Forever. The code is open source, so check it yourself:
-github.com/Abbe0102/EZTOCOIN
+EZTO team share is 10%, locked for a year. not because i'm a saint. because i want people to actually stay
 ```
 
-**Day 11** 🖼️ `4-clean.png`
+**Day 10** 📓
 ```
-A clean token. No surprises.
+tiktok just passed 14k followers and most of you have never seen our telegram 😅
 
-✅ 0% buy & sell tax
-✅ 1B fixed supply
-✅ No freeze authority
-✅ LP burned at launch
+t.me/Eztocoin
 
-All verifiable on-chain after launch. Don't trust, verify. $EZTO #Solana
+come say hi, i read everything
 ```
 
-**Day 12** (question)
+**Day 11** ❓
 ```
-Be honest: have you ever been rugged?
+what do you actually want from a meme coin, besides the price going up?
 
-What happened, and what was the warning sign you missed? 👇
-
-Let's help newer people avoid the same thing.
+serious answers only. ok funny ones too
 ```
 
-**Day 13**
+**Day 12** 💭
 ```
-Why build in public?
+"community driven" is the most abused phrase in crypto.
 
-Because in crypto, "trust me bro" isn't enough.
-
-Our code, our tokenomics and our roadmap are all public before launch. If something looks off, you can tell us.
-
-eztocoin.com
+if the community can't check the code or the wallets, it's not community driven. it's community funded
 ```
 
-**Day 14** (build update)
+**Day 13** 📓
 ```
-Week 2 of building $EZTO:
+set up the telegram properly today. captcha, scam word filters, an auto-reply for when someone asks for the contract.
 
-✅ 8 explainer videos out
-✅ Telegram growing, with captcha & scam filters
-✅ Visit stats live on the site
-
-Still not launched, and not rushing it. Vision first, hype later. ⚡
+kind of sad that all of it is needed. but it is
 ```
 
-### Week 3: Tokenomics & roadmap
-
-**Day 15** 🎬 `tokenomics.mp4`
+**Day 14** ✍️
 ```
-1,000,000,000 $EZTO. Fixed forever.
+why EZTO?
 
-40% Liquidity (LP burned)
-20% Platform (vested)
-15% Marketing
-15% Staking & Rewards (locked)
-10% Team (12-mo cliff, 24-mo vesting)
-
-Full details: eztocoin.com
+[1–2 sentences in your own words: the real moment or reason you decided to start this]
 ```
 
-**Day 16**
+**Day 15** 😅
 ```
-Why does the team get only 10%, locked for a year?
+me: explains mint authority, LP burns and vesting schedules for 20 minutes
 
-Because a team that can dump on day 1 is the oldest rug in the book.
-
-Our tokens unlock slowly, on-chain, where anyone can see it. $EZTO
+them: ok but wen moon
 ```
 
-**Day 17**
+**Day 16** 💭
 ```
-What happens to EZTO's liquidity at launch?
+quick one: before you buy any solana token, paste the address into solscan and look at "mint authority".
 
-The LP tokens get burned.
-
-Translation: nobody, including us, can ever pull the liquidity from the pool. That's not a promise, it's math. $EZTO #Solana
+if it's not empty, the dev can still print more. takes 10 seconds. nobody does it
 ```
 
-**Day 18** 🎬 `roadmap.mp4`
+**Day 17** 📓
 ```
-Where EZTO is going 🗺️
+no launch date yet. i know that's not what people want to hear.
 
-Phase 1: Launch ← now
-Phase 2: Growth & staking
-Phase 3: EZTO Swap
-Phase 4: Ecosystem
-
-No dates until each phase is ready.
+i'd rather launch late and clean than early and messy
 ```
 
-**Day 19**
+**Day 18** ❓
 ```
-EZTO Swap, in one sentence:
+thinking a lot about EZTO Swap lately. idea is dead simple: swap from your own wallet, no account, we never touch your funds.
 
-A simple trading interface where you swap straight from your own wallet, and we never hold your funds.
-
-Your keys, your coins. Always. $EZTO
+what's the most annoying thing about the swap apps you use now?
 ```
 
-**Day 20** (poll: use X's poll feature)
+**Day 19** 🛡️
 ```
-What should EZTO Swap show first?
+there is no EZTO presale.
 
-Poll options:
-• Portfolio overview
-• Price alerts
-• Swap history
-• Fee savings for holders
+if someone offers you one, in a dm, a group, anywhere, it's a scam. block and move on
 ```
 
-**Day 21** (build update)
+**Day 20** 💭
 ```
-Week 3 of building $EZTO:
+you don't need a team of 20 to build something honest.
 
-✅ Tokenomics & vesting explained
-✅ Roadmap public
-✅ Community helping shape EZTO Swap
-
-Thanks to everyone asking hard questions. Keep them coming. 👇
+you mostly need to not lie to people. that's honestly most of it
 ```
 
-### Week 4: Community
-
-**Day 22** 🖼️ `2-website.png`
+**Day 21** ❓ (use X's poll feature)
 ```
-New here? Start with these:
+what do you check first before buying a new token?
 
-🌐 eztocoin.com
-📄 Whitepaper: eztocoin.com/whitepaper.html
-💬 Telegram: t.me/Eztocoin
-🎵 TikTok: @eztocoin
-
-Vision first, hype later. ⚡
+poll: LP burned / mint revoked / team tokens locked / the community
 ```
 
-**Day 23**
+**Day 22** 📓
 ```
-Meme coins don't have to be scams.
+made a bunch of short videos about how meme coins usually screw people, and what we're doing differently.
 
-They can be fun AND honest:
-• clear tokenomics
-• no hidden tax
-• no dev mint
-• locked liquidity
-• open code
-
-That's the whole idea behind $EZTO.
+posting them over the next weeks on tiktok. which one should go first?
 ```
 
-**Day 24** (question)
+**Day 23** 😅
 ```
-If you could ask the founder of a meme coin ONE question before buying, what would it be?
+every new meme coin: "we're different"
 
-Ask me. I'll answer every reply. 👇 $EZTO
-```
-
-**Day 25** 🖼️ `3-what.png`
-```
-EZTO isn't trying to be the loudest coin on Solana.
-
-Just the most honest one.
-
-Vision first, hype later. ⚡
+also every new meme coin: 15% sell tax
 ```
 
-**Day 26**
+**Day 24** ✍️
 ```
-How to spot a fake EZTO in 5 seconds:
-
-1. Is the address on eztocoin.com? No → fake.
-2. Is it pinned in t.me/Eztocoin? No → fake.
-3. Did someone DM you about it? → scam.
-
-Share this. 🛡️
+[one real moment from your week working on EZTO: something that went wrong, a small win, or a question from the community that made you think]
 ```
 
-**Day 27** (Space / AMA announcement; adjust time)
+**Day 25** 💭
 ```
-🎙️ AMA this Sunday, [time] CET, in our Telegram.
+honestly the hardest part of building this isn't the tech.
 
-Ask anything about $EZTO: the token, the roadmap, the launch plan.
+it's staying patient while everyone around you launches something new every single day
+```
 
-Drop your questions below 👇
+**Day 26** 🛡️
+```
+reminder because scammers don't sleep: there's no EZTO token yet.
+
+no presale, no airdrop, no "support team" in your dms. if it's not on eztocoin.com, ignore it
+```
+
+**Day 27** 📓 (fill in the time)
+```
+doing an AMA in the telegram this sunday, [time].
+
+ask me anything. the token, the plan, why i'm even doing this. no question too dumb
+
 t.me/Eztocoin
 ```
 
-**Day 28** (build update)
+**Day 28** ❓
 ```
-1 month of building $EZTO in public.
-
-What started as a meme coin idea now has a website, a whitepaper, open-source launch code, 8 videos and a growing community.
-
-Still no launch date. Still no hype. Just building. ⚡
+if you were building a meme coin from scratch, what's the one thing you'd do differently from what you see out there?
 ```
 
-**Day 29**
+**Day 29** 📓
 ```
-Thank you to everyone who joined the Telegram, asked questions, and shared our posts this month. 🙏
+one month of building EZTO in public.
 
-You're the reason EZTO exists.
+new logo, website, whitepaper, telegram, a bunch of videos. still no token. still not rushing.
 
-Who should we follow & support next? Tag small honest projects 👇
+thanks for being early to the boring part
 ```
 
-**Day 30** 🖼️ `6-roadmap.png`
+**Day 30** 📓
 ```
-Month 1: done. ✅
+next month: more of the same, plus getting ready for launch.
 
-Next month: more education, more community, and launch preparation.
-
-Follow along. Vision first, hype later. ⚡
-
-eztocoin.com
+if you've been lurking, now's a good time to join the telegram. t.me/Eztocoin
 ```
 
 ---
 
-## 5. Threads (post one per week, on a quiet day)
+## 6. Two threads (in the same voice)
 
-### Thread A: "How to check a Solana meme coin in 60 seconds" 🧵
+### Thread A: checking a token yourself 🧵
 ```
-1/ How to check any Solana meme coin in 60 seconds 🧵
+how i check a solana meme coin before buying. takes about a minute 🧵
+```
+```
+1. paste the address into solscan. look for "mint authority". if it's filled in, the dev can still print more tokens. hard no for me
+```
+```
+2. "freeze authority" right below it. if it's set, someone can freeze your tokens so you can't sell. also a no
+```
+```
+3. check where the liquidity is. LP burned or locked = good. if a random wallet holds the LP tokens, they can pull it whenever they want
+```
+```
+4. top holders. if 1 or 2 wallets that aren't the pool own a huge chunk, be careful
+```
+```
+5. do a tiny test buy and sell. if you get back way less than you should, there's a hidden tax
+```
+```
+that's it. not financial advice, just stuff i wish more people did.
 
-Save this before your next buy.
-```
-```
-2/ Open the token on Solscan or Solana Explorer.
-
-Look for "Mint Authority". If it's not empty, the dev can still print more coins.
-```
-```
-3/ Next: "Freeze Authority".
-
-If it's set, someone can freeze your tokens so you can't sell. You want: none.
-```
-```
-4/ Check the liquidity pool.
-
-Were the LP tokens burned or locked? If not, the liquidity can disappear in one click.
-```
-```
-5/ Check the top holders.
-
-If 1–2 wallets (that aren't the pool or a public lock) hold a huge %, be careful.
-```
-```
-6/ Check for a buy/sell tax.
-
-Do a tiny test swap. If you get back much less than expected, there's a hidden tax.
-```
-```
-7/ That's it. 60 seconds, 5 checks.
-
-$EZTO will pass all five at launch, and we'll show you how to verify it yourself.
-
-eztocoin.com
+when EZTO launches i'll walk through these same checks on our own token, live
 ```
 
-### Thread B: "Why we're building EZTO" 🧵
+### Thread B: why i'm building this ✍️ 🧵
 ```
-1/ Why I'm building EZTO, and why it's not "just another meme coin" 🧵
-```
-```
-2/ I've watched too many meme coins launch on hype and die in a week. Hidden taxes, dev wallets dumping, liquidity pulled overnight.
+why i'm building EZTO. a short one 🧵
 ```
 ```
-3/ So EZTO starts from the opposite side: 0% tax, mint revoked, LP burned, team tokens locked for a year.
+[2–3 sentences in your own words: what you saw happen with meme coins, or to people around you, that made you want to do this differently]
 ```
 ```
-4/ Everything is public before launch: the whitepaper, the tokenomics and the actual launch code on GitHub.
+so EZTO starts from the other side. no tax, mint revoked, LP burned, my own tokens locked for a year. all of it public before launch
 ```
 ```
-5/ The meme is the start, not the end. The plan: staking, then EZTO Swap, a simple trading interface where you keep your own keys.
+the meme is the start, not the end. after launch: staking, then a simple swap where you keep your own keys
 ```
 ```
-6/ No dates until things are ready. No price promises, ever.
+no dates until things are ready. no price promises. ever.
 
-Vision first, hype later. ⚡
-
-eztocoin.com
-```
-
-### Thread C: "EZTO tokenomics, explained simply" 🧵
-```
-1/ EZTO tokenomics, explained like you're 5 🧵
-
-1,000,000,000 tokens. Fixed forever. Here's where every one goes 👇
-```
-```
-2/ 40%: Liquidity.
-
-Goes into the trading pool at launch. The LP tokens are burned, so no one can ever pull it.
-```
-```
-3/ 20%: Platform development.
-
-Locked for 6 months, then unlocks slowly over 24 months to fund EZTO Swap.
-```
-```
-4/ 15%: Marketing & listings.
-
-A small part at launch for listings, the rest unlocks over 12 months.
-```
-```
-5/ 15%: Staking & rewards.
-
-Locked until staking goes live, then only paid out as rewards to holders.
-```
-```
-6/ 10%: Team.
-
-Locked for 12 months, then unlocks over 24 months. All locks on-chain and public.
-
-Full breakdown: eztocoin.com
+if that sounds boring, good. boring is what's missing in this space
 ```
 
 ---
 
-## 6. Reply templates
+## 7. Reply templates (adapt the wording every time)
 
-| Situation | Reply |
+| Situation | Reply idea |
 |---|---|
-| Someone asks "when launch?" | No date yet, and we won't rush it. We'll announce it first on eztocoin.com and our Telegram. |
-| Someone asks "wen moon?" | We don't do price talk. We focus on what we build. Roadmap: eztocoin.com |
-| Someone calls it a scam | Fair to be careful! Everything's public: code on GitHub, tokenomics on eztocoin.com. Happy to answer any specific concern. |
-| Someone offers paid promotion / "listing" in DMs | Ignore and block. Real listings don't DM you first. |
-| A big account posts about rugs or safety | Add a genuine tip (from Thread A). Only mention EZTO if it fits naturally. |
-| Someone asks how to help | Thanks! Share a post you like and join t.me/Eztocoin, that's huge for us. |
+| "when launch?" | no date yet, not rushing it. it'll be on eztocoin.com and the telegram first |
+| "wen moon?" | haha no price talk here. ask me anything about what we're building though |
+| "this is a scam" | fair to be careful honestly. code's on github, tokenomics on the site. what would you want to see? |
+| Paid promo / "listing" offers in DMs | ignore and block |
+| Big account posts about rugs | add a real tip (Thread A). only mention EZTO if it fits naturally |
+| "how can I help?" | means a lot. sharing a post or joining the telegram is honestly the biggest help right now |
 
 ---
 
-## 7. Track what works
-Every Sunday, check:
-- **X Analytics** (Premium) or each post's view count: which posts got the most profile clicks?
-- **eztocoin.goatcounter.com → Top referrers:** how many visits came from `x.com` / `t.co`?
-
-Make more of what works. Drop what doesn't.
+## 8. Track what works
+Every Sunday: check which posts got the most profile visits and replies, and look at **eztocoin.goatcounter.com → Top referrers** for visits from `x.com` / `t.co`. Write more like the winners.
